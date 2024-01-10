@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  ecommerce:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=ecommerce
+    networks:
+      - ecommerceDomain
+    ports:
+      - '5434:5432'
+networks:
+  ecommerceDomain:
